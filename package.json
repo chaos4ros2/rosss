@@ -1,0 +1,19 @@
+{
+  "name": "rosss",
+  "version": "1.0.0",
+  "description": "ros2 development support app",
+  "main": "index.js",
+  "scripts": {
+    "build": "node_modules/.bin/electron ."
+  },
+  "author": "chaos",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "electron": "^13.1.6",
+    "electron-packager": "^15.2.0",
+    "npm": "^7.19.1",
+    "webpack": "^5.44.0",
+    "zx": "^2.0.0"
+  }
+}
