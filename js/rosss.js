@@ -24,10 +24,12 @@ function create_pkg() {
   // スタイルの取得
   const style = document.getElementById('pkg_name_dialog').querySelector(".card_title").innerHTML;
   // パッケージ名の取得
-  const pkg_name = document.getElementById('card_input').value;
+  const pkg_name = document.getElementById('pkg_input').value;
+  // ワークスペース名の取得
+  const ws_name = document.getElementById('ws_input').value;
   // スタイルで対応の関数を呼び出す
-  if (style === 'RCLCPP') create_cpp_pkg(pkg_name);
-  else create_py_pkg(pkg_name);
+  if (style === 'RCLCPP') create_cpp_pkg(pkg_name, ws_name);
+  else create_py_pkg(pkg_name, ws_name);
   // ダイアログを閉じる
   document.getElementById('pkg_name_dialog').style.display = 'none';
 }
@@ -35,8 +37,8 @@ function create_pkg() {
 /**
  * rclcppベースのパッケージを作成する
  */
-function create_cpp_pkg(pkg_name) {
-  exec(`zx ./js/create_pkg/rclcpp.mjs ${pkg_name}`);
+function create_cpp_pkg(pkg_name, ws_name) {
+  exec(`zx ./js/create_pkg/rclcpp.mjs ${pkg_name} ${ws_name}`);
   // const button = document.getElementById('button');
   // ipcRenderer.send('test', 'test');
 }
@@ -45,6 +47,6 @@ function create_cpp_pkg(pkg_name) {
 /**
  * rclpyベースのパッケージを作成する
  */
-function create_py_pkg(pkg_name) {
-  exec(`zx ./js/create_pkg/rclpy.mjs ${pkg_name}`);
+function create_py_pkg(pkg_name, ws_name) {
+  exec(`zx ./js/create_pkg/rclpy.mjs ${pkg_name} ${ws_name}`);
 }

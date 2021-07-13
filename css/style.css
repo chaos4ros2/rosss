@@ -195,7 +195,7 @@ a.btn-custom01:active:after {
 .card_link a:hover {
   color: #0090aa;
 }
-#card_input {
+.card_input {
   text-align: center;
   margin: 15px 0 0 25px;
   border:0;
