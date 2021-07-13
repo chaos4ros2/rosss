@@ -25,6 +25,7 @@ app.on('ready', function() {
   mainWindow = new BrowserWindow({
       width: 800, 
       height: 600,
+      title: "ROSSS",
       webPreferences: {
           nodeIntegration: true,
           contextIsolation: false,
@@ -41,6 +42,6 @@ app.on('ready', function() {
   });
 });
 
-ipc.on('test', function (event, _) {
-    exec('zx index.mjs');
-})
+// ipc.on('test', function (event, _) {
+//     exec('zx ./js/index.mjs');
+// })

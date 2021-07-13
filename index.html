@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset='UTF-8'>
     <title>DemoApp</title>
-    <meta name="description" content="">
-    <meta name="keywords" content=""/>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/rosss.js"></script>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''/>
+    <meta name='viewport' content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel='stylesheet' href='./css/style.css'>
+    <script src='./js/rosss.js'></script>
 </head>
-<body ng-app="app" ng-controller="RootCtrl as root">
-<h1 class='title'>ROSSS</h1>
 
+<body ng-app='app' ng-controller='RootCtrl as root'>
+   <h1 class='title'>ROSSS</h1>
+   <div class='wrapper'>
+       <div class='system_1'>
+           <div class='sub_title_1'>パッケージ作成支援</div>
+            
+           <section id='style_zone' class=''>
+             <a class='btn btn-custom01'>
+               <span id='button' class='btn-custom01-front' onclick="show_dialog('RCLCPP');">RCLCPP</span>
+               <i class='fas fa-angle-right fa-position-right'></i>
+             </a>
+             
+             <a class='btn btn-custom01'>
+               <span class='btn-custom01-front' onclick="show_dialog('RCLPY');">RCLPY</span>
+               <i class='fas fa-angle-right fa-position-right'></i>
+             </a>
+           </section>
+        
+           <section id='pkg_name_dialog' class='card'>
+             <div class='card_content'>
+               <h1 class='card_title'></h1>
+               <p class='card_text'>パッケージ名を入力してください。</p>
+               <input id='card_input' type='text'>
+             </div>
+             <div class='card_link'>
+               <a href='#' onclick='create_pkg();'>確定</a>
+             </div>
+           </section>
+       </div>
 
-<a class="btn btn-custom01">
-  <span id="button" class="btn-custom01-front" onclick="test();">RCLCPP</span>
-  <i class="fas fa-angle-right fa-position-right"></i>
-</a>
-
-
-
-<a class="btn btn-custom01">
-  <span class="btn-custom01-front">RCLPY</span>
-  <i class="fas fa-angle-right fa-position-right"></i>
-</a>
-
-    
+       <div class='system_2'>
+        <div class='sub_title_2'>???</div>
+       </div>
+       <div class='system_3'>
+        <div class='sub_title_3'>???</div>
+       </div>
+       <div class='system_4'>
+        <div class='sub_title_4'>???</div>
+       </div>
+  </div>     
 </body>
+
 </html>
 

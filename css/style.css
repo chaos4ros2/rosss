@@ -1,5 +1,7 @@
 .title {
   color : red;
+  font-size: 3em;
+  margin-left: 45%;
 }
 
 @import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
@@ -45,6 +47,7 @@ a.btn-custom01 {
   margin-bottom: 0.5rem;
   padding: 0;
   border-radius: 0.75rem;
+  margin: 30px 60px;
 }
 
 a.btn-custom01:before {
@@ -80,7 +83,8 @@ a.btn-custom01:after {
   left: 1.5rem;
   margin: 0;
   padding: 0;
-  content: "\f0e0";
+  /* todo:c++とpythonのアイコンで置き換える */
+  /* content: "\f0e0"; */
 }
 
 .btn-custom01-front {
@@ -121,7 +125,8 @@ a.btn-custom01:hover:before {
 }
 
 a.btn-custom01:hover:after {
-  content: "\f2b6";
+  /* todo:言語アイコンで置き換える */
+  /* content: "\f2b6"; */
 }
 
 a.btn-custom01:active {
@@ -137,5 +142,133 @@ a.btn-custom01:active:before {
 }
 
 a.btn-custom01:active:after {
-  content: "\f2b6";
+  /* todo:言語アイコンで置き換える */
+  /* content: "\f2b6"; */
+}
+
+
+/* パッケージ名入力用プロンプト */
+/* body {
+  background: #eee;
+} */
+
+#pkg_name_dialog {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  top: 31%;
+  left: 11%;
+}
+.card {
+  margin: 30px auto;
+  width: 300px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
+}
+.card_content {
+  padding: 20px;
+}
+.card_title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+.card_text {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+.card_link {
+  text-align: center;
+  border-top: 1px solid #eee;
+  padding: 20px;
+}
+.card_link a {
+  text-decoration: none;
+  color: #0bd;
+  margin: 0 10px;
+  font-size: 2em;
+}
+.card_link a:hover {
+  color: #0090aa;
+}
+#card_input {
+  text-align: center;
+  margin: 15px 0 0 25px;
+  border:0;
+  padding:5px;
+  font-size:2em;
+  font-family:Arial, sans-serif;
+  border:solid 1px #ccc;
+  width:200px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+
+/* grid layout */
+.wrapper {
+  display: grid;
+  grid-template-rows: 50% 1fr;
+  grid-template-columns: 50% 1fr;
+  grid-template-areas:
+  "system_1 system_2"
+  "system_3 system_4";
+  width: 100%;
+  height: 600px;
+}
+
+.system_1 {
+  grid-area: system_1;
+}
+
+.system_2 {
+  grid-area: system_2;
+}
+
+.system_3 {
+  grid-area: system_3;
+}
+
+.system_4 {
+  grid-area: system_4;
+}
+
+
+/* sub_tilte */
+/* https://jajaaan.co.jp/css/css-headline/ */
+.sub_title_1, .sub_title_2, .sub_title_3, .sub_title_4 {
+  position: relative;
+  padding: 1rem 2rem calc(1rem + 10px);
+  font-size: large;
+}
+
+.sub_title_1:before, .sub_title_2:before, .sub_title_3:before, .sub_title_4:before {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: 100%;
+  height: 100%;
+  content: '';
+  border: 4px solid #000;
+}
+
+.sub_title_1 {
+  background: #fff100;
+}
+
+.sub_title_2 {
+  background: #00ff00;
+}
+
+.sub_title_3 {
+  background: #00c3ff;
+}
+
+.sub_title_4 {
+  background: #ff0000;
 }
