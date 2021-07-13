@@ -35,3 +35,7 @@ $ npm install
 ```
 $ npm run build
 ```
+# Useage
+1.ROS2パッケージ作成支援機能：   
+  パッケージの雛形をUIを通じて楽に作成できます。
+![useage](https://user-images.githubusercontent.com/80691913/125475619-19f53aa6-754d-47e4-b70c-fb41bc4a4719.gif)
