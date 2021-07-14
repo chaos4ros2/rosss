@@ -10,7 +10,10 @@ const ws_name = process.argv.slice(4).toString();
 const pkg_name = process.argv.slice(3).toString().replace(`,${ws_name}`, '');
 
 // cd('/home/chaos/rosss');
-// 基準パスはrosss内、cd関数実行後の
+// 基準パスはrosssフォルダー内、cd関数実行したあとのカレントディレクトリは次の行引き継がれないため、「&&」でコマンドをつなげる
 await $`cd ../${ws_name} && ros2 pkg create --build-type ament_cmake ${pkg_name}`;
 // homeディレクター内で実行する場合、「~」を認識できない
 // await $`cd ../ && ros2 pkg create --build-type ament_cmake "${pkg_name}"`;
+
+// ノードのテンプレートをパッケージフォルダーにコピーする
+await $`cp -n ./template/rclcpp/* ../${ws_name}/${pkg_name}/src`;
