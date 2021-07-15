@@ -30,7 +30,7 @@ $ cd rosss
 $ npm install
 ```
 
-4.アプリを起動います。
+4.アプリを起動します。
 
 ```
 $ npm run build
